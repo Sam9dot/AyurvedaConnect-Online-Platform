@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — AyurvedaConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" /><script src="js/app.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          if (typeof window.createAdminCharts === 'function') {
+            window.createAdminCharts();
+          }
+          if (typeof window.createUserTypeDistribution === 'function') {
+            window.createUserTypeDistribution();
+          }
+          if (typeof window.createRevenueChart === 'function') {
+            window.createRevenueChart();
+          }
+        }, 500);
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="logo" href="index.html"><img class="logo__img" src="assets/logo.png" width="72" height="72" alt="Logo" /><span class="logo__text">AyurvedaConnect</span></a><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button><nav id="main-nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="wellness.html">Wellness Centres</a><a href="doctors.html">Doctors</a><a href="products.html">Products</a><a href="login.html">Login</a></nav></div></header>
+    <aside id="sidebar" class="sidebar"><div class="sidebar__brand">Admin Panel</div><nav class="sidebar__nav"></nav></aside>
+    <button id="sidebar-toggle" title="Toggle Sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <main id="main-content" class="dashboard-centered">
+      <div id="admin-panel">
+        <section class="dashboard-welcome"><h1>Admin Dashboard</h1><p>Manage listings, track activity, and approve new registrations.</p></section>
+        <div class="dash-stats">
+          <div class="dash-stat dash-stat--green"><div class="dash-stat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="dash-stat__value" id="admin-stat-users">0</div><div class="dash-stat__label">Total Users</div></div>
+          <div class="dash-stat dash-stat--gold"><div class="dash-stat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="dash-stat__value" id="admin-stat-pending">0</div><div class="dash-stat__label">Pending</div></div>
+          <div class="dash-stat dash-stat--violet"><div class="dash-stat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="dash-stat__value" id="admin-stat-approved">0</div><div class="dash-stat__label">Approved</div></div>
+          <div class="dash-stat dash-stat--teal"><div class="dash-stat__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="dash-stat__value" id="admin-stat-orders">0</div><div class="dash-stat__label">Orders</div></div>
+        </div>
+        <section class="dash-section"><h2 class="dash-section__title">Pending Approvals</h2><div id="admin-pending" class="dash-cards"></div></section>
+        
+        <!-- Enhanced Admin Analytics -->
+        <section class="dash-section">
+          <h2 class="dash-section__title">System Analytics</h2>
+          <div class="progress-rings">
+            <div class="progress-ring">
+              <div id="admin-user-growth"></div>
+            </div>
+            <div class="progress-ring">
+              <div id="admin-revenue-growth"></div>
+            </div>
+            <div class="progress-ring">
+              <div id="admin-satisfaction"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- User Distribution Chart -->
+        <section class="dash-section">
+          <div id="user-type-chart"></div>
+        </section>
+
+        <!-- Revenue Chart -->
+        <section class="dash-section">
+          <div id="revenue-chart"></div>
+        </section>
+        
+        <section class="dash-section"><h2 class="dash-section__title">Activity Log</h2><div id="admin-activity" class="dash-cards"></div></section>
+      </div>
+    </main>
+    <footer class="site-footer"><p class="footer-copy">&copy; AyurvedaConnect</p></footer>
+  </body>
+</html>

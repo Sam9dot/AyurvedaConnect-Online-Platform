@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products — AyurvedaConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" /><script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html"><img class="logo__img" src="assets/logo.png" width="72" height="72" alt="Logo" /><span class="logo__text">AyurvedaConnect</span></a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav id="main-nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="wellness.html">Wellness Centres</a><a href="doctors.html">Doctors</a><a href="products.html">Products</a><a href="login.html">Login</a></nav>
+      </div>
+    </header>
+    <main>
+      <header class="page-header">
+        <h1 class="page-title">Ayurvedic products</h1>
+        <p class="lead">Curated herbal products from trusted Pune-based and national wellness brands.</p>
+      </header>
+
+      <div class="search-sort-bar">
+        <input type="text" id="product-search" placeholder="Search products by name or category..." class="search-input" />
+        <select id="product-sort" class="sort-select">
+          <option value="">Sort by Default</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A–Z</option>
+        </select>
+      </div>
+
+      <div class="grid" id="products-grid"></div>
+    </main>
+    <footer class="site-footer"><p class="footer-copy">© AyurvedaConnect · Pune, Maharashtra</p></footer>
+  </body>
+</html>

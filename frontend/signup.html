@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up — AyurvedaConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" /><script src="js/app.js" defer></script>
+  </head>
+  <body class="auth-body">
+    <header class="site-header"><div class="header-inner"><a class="logo" href="index.html"><img class="logo__img" src="assets/logo.png" width="72" height="72" alt="Logo" /><span class="logo__text">AyurvedaConnect</span></a><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button><nav id="main-nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="wellness.html">Wellness Centres</a><a href="doctors.html">Doctors</a><a href="products.html">Products</a><a href="login.html">Login</a></nav></div></header>
+    <main class="auth-main">
+      <div class="auth-card auth-card--wide">
+        <div class="auth-card__decoration" aria-hidden="true">
+          <span class="auth-card__leaf"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M12 3c-4 2-6 5-6 9s2 7 6 9M12 3c4 2 6 5 6 9s-2 7-6 9"/></svg></span>
+        </div>
+        <h1 class="page-title">Join AyurvedaConnect</h1>
+        <p class="lead">Choose your role and create an account to get started.</p>
+        <form id="signup-form" class="form-stack" action="#" method="post" onsubmit="return false;">
+          <div>
+            <label for="user-type">I am a</label>
+            <select id="user-type" name="user_type" required>
+              <option value="patient">Patient / User</option>
+              <option value="doctor">Doctor</option>
+              <option value="seller">Product Seller</option>
+              <option value="wellness">Wellness Centre</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required /></div>
+          <div><label for="phone">Phone Number (Required for OTP)</label><input id="phone" type="tel" name="phone" placeholder="e.g. 9876543210" pattern="\d{10,15}" required /></div>
+          <div><label for="password">Password</label><input id="password" type="password" name="password" autocomplete="new-password" required minlength="8" /><span class="form-hint">At least 8 characters</span></div>
+          <button type="submit" class="btn btn--gold btn--block">Create account</button>
+        </form>
+        <p class="note">Already have an account? <a href="login.html">Sign in</a></p>
+      </div>
+    </main>
+    <footer class="site-footer"><p class="footer-copy">&copy; AyurvedaConnect</p></footer>
+  </body>
+</html>

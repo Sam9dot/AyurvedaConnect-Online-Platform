@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Dashboard — AyurvedaConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" /><script src="js/app.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          if (typeof window.createDoctorMetrics === 'function') {
+            window.createDoctorMetrics();
+          }
+
+          if (typeof window.createAppointmentCalendar === 'function') {
+            window.createAppointmentCalendar();
+          }
+        }, 500);
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="logo" href="index.html"><img class="logo__img" src="assets/logo.png" width="72" height="72" alt="Logo" /><span class="logo__text">AyurvedaConnect</span></a><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button><nav id="main-nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="wellness.html">Wellness Centres</a><a href="doctors.html">Doctors</a><a href="products.html">Products</a><a href="login.html">Login</a></nav></div></header>
+    <aside id="sidebar" class="sidebar"><div class="sidebar__brand">Doctor Panel</div><nav class="sidebar__nav"></nav></aside>
+    <button id="sidebar-toggle" title="Toggle Sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <main id="main-content" class="dashboard-centered">
+      <div id="doctor-panel">
+        <section class="dashboard-welcome"><h1>Doctor Dashboard</h1><p>Manage your profile, view appointments, and track patients.</p></section>
+
+        <section class="dash-section">
+          <h2 class="dash-section__title">Create / Update Your Profile</h2>
+          <p class="dash-section__subtitle">Once saved, your profile will appear on the Doctors listing page.</p>
+          <div class="book-form">
+            <form id="doctor-profile-form" class="form-stack">
+              <div class="form-row">
+                <div><label for="doc-name">Full Name</label><input type="text" id="doc-name" placeholder="Dr. Your Name" required /></div>
+                <div><label for="doc-spec">Specialization</label><input type="text" id="doc-spec" placeholder="e.g. Ayurvedic Doctor" required /></div>
+              </div>
+              <div class="form-row">
+                <div><label for="doc-exp">Experience</label><select id="doc-exp"><option value="0-2">0-2 years</option><option value="3-5">3-5 years</option><option value="6-10" selected>6-10 years</option><option value="10+">10+ years</option></select></div>
+                <div><label for="doc-phone">Phone</label><input type="text" id="doc-phone" placeholder="+91 20 xxxx xxxx" /></div>
+              </div>
+              <div class="form-row">
+                <div><label for="doc-location">Location</label><input type="text" id="doc-location" placeholder="e.g. Pune" /></div>
+                <div><label for="doc-image">Photo URL</label><input type="text" id="doc-image" placeholder="https://..." /></div>
+              </div>
+              <div><label for="doc-bio">Bio</label><textarea id="doc-bio" rows="3" placeholder="Tell patients about yourself..."></textarea></div>
+              <button type="submit" class="btn btn--gold btn--block">Save Profile</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="dash-section"><h2 class="dash-section__title">Patient Appointments</h2><div id="doctor-appointments" class="dash-cards"></div></section>
+        
+        <!-- Enhanced Doctor Analytics -->
+        <section class="dash-section">
+          <h2 class="dash-section__title">Performance Metrics</h2>
+          <div id="doctor-metrics"></div>
+        </section>
+
+
+
+        <!-- Today's Schedule -->
+        <section class="dash-section">
+          <h2 class="dash-section__title">Today's Schedule</h2>
+          <div id="appointment-calendar"></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><p class="footer-copy">&copy; AyurvedaConnect</p></footer>
+  </body>
+</html>

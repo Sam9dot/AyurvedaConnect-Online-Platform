@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Centre Dashboard — AyurvedaConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" /><script src="js/app.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          if (typeof window.createWellnessMetrics === 'function') {
+            window.createWellnessMetrics();
+          }
+          if (typeof window.createServiceAnalytics === 'function') {
+            window.createServiceAnalytics();
+          }
+          if (typeof window.createClientProgress === 'function') {
+            window.createClientProgress();
+          }
+        }, 500);
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="logo" href="index.html"><img class="logo__img" src="assets/logo.png" width="72" height="72" alt="Logo" /><span class="logo__text">AyurvedaConnect</span></a><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button><nav id="main-nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="wellness.html">Wellness Centres</a><a href="doctors.html">Doctors</a><a href="products.html">Products</a><a href="login.html">Login</a></nav></div></header>
+    <aside id="sidebar" class="sidebar"><div class="sidebar__brand">Centre Panel</div><nav class="sidebar__nav"></nav></aside>
+    <button id="sidebar-toggle" title="Toggle Sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <main id="main-content" class="dashboard-centered">
+      <div id="wellness-panel">
+        <section class="dashboard-welcome"><h1>Wellness Centre Dashboard</h1><p>Manage your services and centre information.</p></section>
+        <div class="book-form" style="margin-bottom:2rem">
+          <h2>Add Service</h2>
+          <form id="add-service-form" class="form-stack">
+            <div><label for="svc-name">Service Name</label><input type="text" id="svc-name" required /></div>
+            <div class="form-row"><div><label for="svc-price">Price (₹)</label><input type="text" id="svc-price" required /></div><div><label for="svc-duration">Duration</label><input type="text" id="svc-duration" placeholder="e.g. 1 hour" required /></div></div>
+            <button type="submit" class="btn btn--gold btn--block">Submit Service</button>
+          </form>
+        </div>
+        <section class="dash-section"><h2 class="dash-section__title">Your Services</h2><div id="wellness-services-list" class="dash-cards"></div></section>
+        
+        <!-- Enhanced Wellness Analytics -->
+        <section class="dash-section">
+          <h2 class="dash-section__title">Centre Metrics</h2>
+          <div id="wellness-metrics"></div>
+        </section>
+
+        <!-- Service Analytics -->
+        <section class="dash-section">
+          <div id="service-analytics"></div>
+        </section>
+
+        <!-- Client Progress -->
+        <section class="dash-section">
+          <h2 class="dash-section__title">Client Progress</h2>
+          <div class="progress-rings">
+            <div class="progress-ring">
+              <div id="member-retention"></div>
+            </div>
+            <div class="progress-ring">
+              <div id="class-attendance"></div>
+            </div>
+            <div class="progress-ring">
+              <div id="wellness-goals"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><p class="footer-copy">&copy; AyurvedaConnect</p></footer>
+  </body>
+</html>

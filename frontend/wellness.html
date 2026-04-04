@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness Centres & Yoga — AyurvedaConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" /><script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header"><div class="header-inner"><a class="logo" href="index.html"><img class="logo__img" src="assets/logo.png" width="72" height="72" alt="Logo" /><span class="logo__text">AyurvedaConnect</span></a><button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button><nav id="main-nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="wellness.html">Wellness Centres</a><a href="doctors.html">Doctors</a><a href="products.html">Products</a><a href="login.html">Login</a></nav></div></header>
+    <main>
+      <header class="page-header">
+        <h1 class="page-title">Wellness Centres & Yoga Studios</h1>
+        <p class="lead">Discover certified centres near you — filter by type.</p>
+        <div class="filter-tabs" style="margin-top:1.25rem">
+          <button class="filter-tab filter-tab--active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="yoga">Yoga Centres</button>
+          <button class="filter-tab" data-filter="wellness">Wellness Centres</button>
+        </div>
+        <div class="search-bar" style="margin-top:1rem"><input type="text" id="wellness-search" placeholder="Search by name, location, or service..." class="search-input" /></div>
+      </header>
+      <div class="grid" id="wellness-grid"></div>
+    </main>
+    <footer class="site-footer"><p class="footer-copy">&copy; AyurvedaConnect &middot; Wellness rooted in nature</p></footer>
+  </body>
+</html>

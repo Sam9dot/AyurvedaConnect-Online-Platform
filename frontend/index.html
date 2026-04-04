@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AyurvedaConnect — Reconnect with Nature</title>
+    <meta name="description" content="AyurvedaConnect — holistic wellness platform connecting you with expert Ayurvedic doctors, pure herbal products, and wellness centres." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html" aria-label="AyurvedaConnect — Home">
+          <img
+            class="logo__img"
+            src="assets/logo.png"
+            width="56"
+            height="56"
+            alt="AyurvedaConnect Logo"
+          />
+          <span class="logo__text">AyurvedaConnect</span>
+        </a>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu
+        </button>
+        <nav id="main-nav" class="nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="products.html">Products</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main--flush">
+      <!-- Hero -->
+      <section class="hero" aria-label="Hero">
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__particles" aria-hidden="true">
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+          <span class="hero__particle"></span>
+        </div>
+        <div class="hero__content">
+          <div class="hero__logo-wrap">
+            <span class="hero__logo-text">AyurvedaConnect</span>
+          </div>
+          <h1 class="hero__title">Reconnect with Nature through Ayurveda</h1>
+          <p class="hero__subtitle">
+            Holistic healing rooted in ancient wisdom—expert practitioners, pure formulations, and a
+            path to balance for body, mind, and planet.
+          </p>
+          <div class="hero__actions">
+            <a href="doctors.html" class="btn btn--gold">Explore Doctors</a>
+            <a href="products.html" class="btn btn--outline">Shop Products</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="section section--cream" aria-labelledby="benefits-heading">
+        <h2 id="benefits-heading" class="section__heading">Why Ayurveda matters</h2>
+        <p class="section__intro">
+          Sustainable wellness that honors the earth—natural rhythms, plant-based care, and
+          time-tested rituals for modern life.
+        </p>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3v18M12 3c-4 2-6 5-6 9s2 7 6 9M12 3c4 2 6 5 6 9s-2 7-6 9" />
+              </svg>
+            </div>
+            <h3>Natural balance</h3>
+            <p>
+              Personalized routines aligned with your constitution—supporting digestion, sleep, and
+              vitality without harsh chemicals.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 3" />
+              </svg>
+            </div>
+            <h3>Whole-person care</h3>
+            <p>
+              Doctors who treat root causes—not just symptoms—with nutrition, herbs, and mindful
+              lifestyle guidance.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Earth-conscious</h3>
+            <p>
+              Ethically sourced botanicals and low-impact practices—wellness that respects
+              sustainability and future generations.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19h16M7 16l3-8 4 5 3-6" />
+                <circle cx="9" cy="10" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <h3>Pure formulations</h3>
+            <p>
+              Authentic Ayurvedic products—oils, herbs, and blends crafted for purity and
+              transparency you can trust.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="section" aria-labelledby="featured-heading" style="max-width:var(--max-width);margin:0 auto;">
+        <h2 id="featured-heading" class="section__heading">Featured Products</h2>
+        <p class="section__intro">Handpicked Ayurvedic essentials to elevate your daily wellness routine.</p>
+        <div class="featured-grid">
+          <a href="products.html" class="featured-product">
+            <img class="featured-product__img" src="https://www.arlakayurveda.com/wp-content/uploads/2023/03/Ashwagandha-Bottle-3D-scaled.jpg" alt="Ashwagandha Capsules" loading="lazy" />
+            <div class="featured-product__body">
+              <h3 class="featured-product__name">Ashwagandha Capsules</h3>
+              <p class="featured-product__price">₹899</p>
+            </div>
+          </a>
+          <a href="products.html" class="featured-product">
+            <img class="featured-product__img" src="https://img1.exportersindia.com/product_images/bc-full/2024/4/4190081/kumkumadi-tailam-face-serum-1712816494-7379236.jpeg" alt="Kumkumadi Face Oil" loading="lazy" />
+            <div class="featured-product__body">
+              <h3 class="featured-product__name">Kumkumadi Face Oil</h3>
+              <p class="featured-product__price">₹1,299</p>
+            </div>
+          </a>
+          <a href="products.html" class="featured-product">
+            <img class="featured-product__img" src="https://ayuspa.co.nz/wp-content/uploads/2022/01/t-golden-milk.jpg" alt="Golden Milk Mix" loading="lazy" />
+            <div class="featured-product__body">
+              <h3 class="featured-product__name">Turmeric Golden Milk</h3>
+              <p class="featured-product__price">₹450</p>
+            </div>
+          </a>
+          <a href="products.html" class="featured-product">
+            <img class="featured-product__img" src="https://assets.hyugalife.com/catalog/product/h/s/hsky66b0_2__1.jpg" alt="Amla Tablets" loading="lazy" />
+            <div class="featured-product__body">
+              <h3 class="featured-product__name">Amla Vitamin C Tablets</h3>
+              <p class="featured-product__price">₹299</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section section--cream" aria-labelledby="testimonials-heading">
+        <h2 id="testimonials-heading" class="section__heading">What Our Community Says</h2>
+        <p class="section__intro">Real stories from people who've embraced Ayurvedic living.</p>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">AyurvedaConnect changed how I approach my health. The Panchakarma sessions recommended by Dr. Sharma were transformative. I feel more balanced than ever.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">P</div>
+              <div>
+                <div class="testimonial-card__name">Priya Kapoor</div>
+                <div class="testimonial-card__role">Wellness Enthusiast, Pune</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">The herbal supplements I ordered are genuinely pure. As a fitness coach, I love that I can recommend products from AyurvedaConnect with confidence.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">A</div>
+              <div>
+                <div class="testimonial-card__name">Arjun Mehta</div>
+                <div class="testimonial-card__role">Fitness Coach, Mumbai</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">Being able to book appointments with authentic Ayurvedic doctors online saved me so much time. The consultation was thorough and deeply insightful.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">S</div>
+              <div>
+                <div class="testimonial-card__name">Sunita Deshmukh</div>
+                <div class="testimonial-card__role">Working Professional, Pune</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--peach" aria-labelledby="cta-heading">
+        <h2 id="cta-heading" class="section__heading">Begin your journey</h2>
+        <p class="section__intro">
+          Book a consultation or explore our curated shop—your path to natural living starts here.
+        </p>
+        <div class="cta-row text-center">
+          <a href="signup.html" class="btn btn--gold">Create an account</a>
+          <a href="login.html" class="btn btn--outline-dark">Sign in</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer__brand" aria-hidden="true" style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+        <img class="footer__logo" src="assets/logo.png" width="48" height="48" alt="" loading="lazy" style="border-radius: 50%; object-fit: cover;" />
+        <span class="logo__text" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-left: 0.5rem; color: var(--color-dark-green);">AyurvedaConnect</span>
+      </div>
+      <p class="footer-copy">© AyurvedaConnect · Wellness rooted in nature</p>
+    </footer>
+  </body>
+</html>
