@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var API_BASE = "https://ayurvedaconnect.onrender.com/";
+  var API_BASE = "https://ayurvedaconnect.onrender.com";
   var token = localStorage.getItem("token");
   var userRole = localStorage.getItem("userRole") || "";
   var userName = localStorage.getItem("userName") || "";
